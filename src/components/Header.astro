@@ -1,0 +1,19 @@
+---
+interface HeaderProps {
+  title: string;
+  description: string;
+}
+
+interface Props {
+  data: HeaderProps;
+}
+
+const { data } = Astro.props;
+---
+
+<section class="py-12">
+  <div class="container mx-auto px-4">
+    <h1 class="text-4xl font-bold mb-6 font-heading text-primary-800 animate-fade-in">{data.title}</h1>
+    <p class="text-xl mb-8 text-gray-600 max-w-4xl">{data.description}</p>
+  </div>
+</section>

@@ -1,0 +1,159 @@
+{
+    "hero": {
+        "title": "Învață engleza într-un mod <span class='from-primary from-0% to-secondary to-80% bg-clip-text text-transparent bg-gradient-to-r leading-[60px]'>distractiv, interactiv și eficient!</span>",
+        "description": "Alătură-te programelor noastre bazate pe metodologia Cambridge și deschide-ți noi oportunități! Cursuri adaptate pentru copii, adolescenți și adulți.",
+        "buttons": [
+            {
+                "text": "Explorează Cursurile",
+                "url": "/classes",
+                "primary": true
+            },
+            {
+                "text": "Contactează-ne",
+                "url": "/contact",
+                "primary": false
+            }
+        ]
+    },
+    "ageGroups": {
+        "title": "Cursuri adaptate pentru toate vârstele",
+        "items": [
+            {
+                "title": "Copii (5-11 ani)",
+                "description": "Cursuri creative și distractive care dezvoltă dragostea pentru limba engleză prin jocuri, cântece și activități interactive.",
+                "icon": "kids"
+            },
+            {
+                "title": "Adolescenți (12-17 ani)",
+                "description": "Programe dinamice care combină pregătirea pentru examene Cambridge cu abilitățile de comunicare necesare în era digitală.",
+                "icon": "teens"
+            },
+            {
+                "title": "Adulți (18+ ani)",
+                "description": "Cursuri flexibile concepute pentru a îmbunătăți engleza profesională, academică sau conversațională conform standardelor Cambridge.",
+                "icon": "adults"
+            }
+        ]
+    },
+    "features": {
+        "title": "De ce să alegi Centrul de Limba Engleză Cambridge",
+        "description": "Oferim educație de înaltă calitate folosind metodologia Cambridge recunoscută la nivel internațional.",
+        "items": [
+            {
+                "title": "Profesori Certificați Cambridge",
+                "description": "Toți instructorii noștri sunt profesori certificați Cambridge English cu ani de experiență în predare personalizată."
+            },
+            {
+                "title": "Metodologie Internațională",
+                "description": "Urmăm metodologia de predare Cambridge dovedită pentru a asigura o învățare eficientă și rezultate excelente."
+            },
+            {
+                "title": "Grupuri Mici de Studiu",
+                "description": "Maximizăm interacțiunea și atenția personalizată prin menținerea grupurilor de studiu de dimensiuni reduse."
+            }
+        ]
+    },
+    "services": {
+        "title": "Serviciile Noastre",
+        "description": "Oferim o gamă variată de servicii pentru a sprijini dezvoltarea abilităților de limba engleză pentru toate vârstele și nivelurile.",
+        "items": [
+            {
+                "title": "Cambridge Young Learners (YLE)",
+                "description": "Cursuri special concepute pentru copii între 5-12 ani care dezvoltă încrederea și dragostea pentru limba engleză.",
+                "icon": "book-open"
+            },
+            {
+                "title": "Cambridge English: Preliminary (PET)",
+                "description": "Pregătire pentru certificarea de nivel intermediar B1, ideală pentru adolescenți și adulți.",
+                "icon": "academic-cap"
+            },
+            {
+                "title": "Cambridge English: First (FCE)",
+                "description": "Pregătire pentru certificarea de nivel B2, demonstrând abilități avansate de comunicare în limba engleză.",
+                "icon": "certificate"
+            },
+            {
+                "title": "Cambridge English: Advanced (CAE)",
+                "description": "Pregătire pentru certificarea de nivel C1, esențială pentru studii universitare sau cariere internaționale.",
+                "icon": "star"
+            }
+        ]
+    },
+    "testimonials": {
+        "title": "Ce spun elevii noștri",
+        "items": [
+            {
+                "text": "Am făcut progrese incredibile în doar câteva luni. Metodele de predare sunt interactive și distractive!",
+                "author": "Maria, 14 ani",
+                "course": "Cambridge English: Preliminary (PET)"
+            },
+            {
+                "text": "Copilul meu adoră cursurile și vorbește deja engleză cu încredere. Recomand cu căldură!",
+                "author": "Ana, părinte",
+                "course": "Young Learners English"
+            },
+            {
+                "text": "Cursurile pentru adulți sunt flexibile și foarte eficiente. Am reușit să-mi îmbunătățesc considerabil engleza pentru carieră.",
+                "author": "Andrei, 32 ani",
+                "course": "Cambridge English: Advanced (CAE)"
+            }
+        ]
+    },
+    "courses": {
+        "title": "Cursuri Principale",
+        "items": [
+            {
+                "title": "Cambridge Young Learners",
+                "description": "Cursuri distractive și interactive pentru copii între 5-11 ani, dezvoltând abilitățile de bază într-un mediu captivant.",
+                "ageGroup": "copii",
+                "link": {
+                    "text": "Află mai multe",
+                    "url": "/classes"
+                }
+            },
+            {
+                "title": "Cambridge B1-B2 (PET/FCE)",
+                "description": "Ideal pentru adolescenți și adulți care doresc să-și dezvolte abilitățile practice de engleză pentru studiu și muncă.",
+                "ageGroup": "adolescenți și adulți",
+                "link": {
+                    "text": "Află mai multe",
+                    "url": "/classes"
+                }
+            },
+            {
+                "title": "Cambridge C1-C2 (CAE/CPE)",
+                "description": "Pentru cursanții avansați care doresc să-și perfecționeze engleza pentru mediul academic sau profesional.",
+                "ageGroup": "adulți",
+                "link": {
+                    "text": "Află mai multe",
+                    "url": "/classes"
+                }
+            }
+        ]
+    },
+    "cta": {
+        "title": "Pregătit să îți îmbunătățești engleza?",
+        "description": "Înscrie-te acum pentru o lecție demonstrativă gratuită și începe-ți călătoria spre fluență în limba engleză!",
+        "button": {
+            "text": "Contactează-ne",
+            "url": "/contact"
+        }
+    },
+    "contact": {
+        "title": "Contactează-ne",
+        "description": "Avem o echipă dedicată gata să răspundă la toate întrebările tale despre cursurile noastre de limbă engleză și programele Cambridge.",
+        "address": {
+            "address": "Strada Exemplu 123, București, România",
+            "phone": "+40 722 123 456",
+            "email": "contact@example.com"
+        },
+        "form": {
+            "namePlaceholder": "Numele tău",
+            "emailPlaceholder": "Adresa de email",
+            "phonePlaceholder": "Numărul de telefon",
+            "messagePlaceholder": "Mesajul tău",
+            "buttonText": "Trimite mesajul"
+        },
+        "mapTitle": "Locația noastră"
+    }
+}

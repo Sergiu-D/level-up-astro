@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import classesData from '../data/classes.json';
+import { loadDataWithVariables } from '../utils/variables.js';
+import Header from '../components/Header.astro';
+import CourseDetail from '../components/CourseDetail.astro';
+import CTA from '../components/CTA.astro';
+
+const processedData = loadDataWithVariables(classesData);
+---
+
+<Layout title="Classes">
+  <Header data={processedData.header} />
+  
+  <section class="container mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 animate-slide-up">
+      {processedData.courses.map(course => (
+        <CourseDetail data={course} />
+      ))}
+    </div>
+  </section>
+  
+  <CTA data={processedData.cta} />
+</Layout>

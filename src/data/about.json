@@ -1,0 +1,60 @@
+{
+    "header": {
+        "title": "Despre Centrul de Limba Engleză Cambridge",
+        "description": "Ne dedicăm să oferim educație de înaltă calitate în limba engleză folosind metodologia Cambridge."
+    },
+    "story": {
+        "title": "Povestea Noastră",
+        "paragraphs": [
+            "Centrul de Limba Engleză Cambridge a fost fondat în 2010 cu misiunea de a oferi educație excepțională în limba engleză pentru studenți de toate vârstele și din toate mediile. De-a lungul anilor, am ajutat mii de studenți să-și atingă obiectivele de învățare a limbii și să obțină calificări recunoscute internațional.",
+            "Centrul nostru este dedicat menținerii celor mai înalte standarde de predare și învățare, urmând metodologia Cambridge care s-a dovedit de succes la nivel mondial."
+        ]
+    },
+    "approach": {
+        "title": "Abordarea Noastră",
+        "description": "La Centrul de Limba Engleză Cambridge, credem într-o abordare comunicativă a învățării limbii. Metodologia noastră de predare se concentrează pe dezvoltarea tuturor celor patru abilități lingvistice: citire, scriere, ascultare și vorbire.",
+        "methodology": {
+            "title": "Metodologia Cambridge",
+            "description": "Urmăm metodologia de predare Cambridge English, care este recunoscută la nivel mondial pentru eficiența și calitatea sa. Această abordare pune accent pe:",
+            "points": [
+                "Predarea limbii prin comunicare",
+                "Învățarea bazată pe sarcini",
+                "Dezvoltarea integrată a abilităților",
+                "Materiale autentice și contexte din viața reală",
+                "Evaluare continuă și feedback"
+            ]
+        }
+    },
+    "facilities": {
+        "title": "Facilitățile Noastre",
+        "description": "Centrul nostru este dotat cu săli de clasă moderne, resurse multimedia și o bibliotecă de materiale în limba engleză. Oferim un mediu confortabil și stimulant pentru o învățare eficientă."
+    },
+    "team": {
+        "title": "Echipa Noastră",
+        "members": [
+            {
+                "name": "Jane Smith",
+                "position": "Director și Profesor Senior",
+                "description": "Calificată Cambridge CELTA și DELTA cu peste 15 ani de experiență în predare."
+            },
+            {
+                "name": "John Davis",
+                "position": "Coordonator Academic",
+                "description": "Specializat în pregătirea pentru examenele Cambridge cu 10 ani de experiență."
+            },
+            {
+                "name": "Sarah Johnson",
+                "position": "Specialist pentru Tineri Cursanți",
+                "description": "Expert în predarea copiilor cu certificare Cambridge YLE."
+            }
+        ]
+    },
+    "accreditations": {
+        "title": "Acreditările Noastre",
+        "description": "Centrul de Limba Engleză Cambridge este un centru autorizat de examinare Cambridge English.",
+        "cta": {
+            "text": "Contactează-ne",
+            "url": "/contact"
+        }
+    }
+}

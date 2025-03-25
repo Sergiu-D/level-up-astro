@@ -1,0 +1,147 @@
+---
+interface ContactAddress {
+  address: string;
+  phone: string;
+  email: string;
+}
+
+interface ContactProps {
+  title: string;
+  description: string;
+  address: ContactAddress;
+}
+
+interface Props {
+  data: ContactProps;
+}
+
+const { data } = Astro.props;
+---
+
+<section class="py-16 bg-gradient-to-b from-indigo-50 to-white relative overflow-hidden">
+  <!-- Decorative elements -->
+  <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-100 rounded-full -mr-32 -mt-32 opacity-50"></div>
+  <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-100 rounded-full -ml-40 -mb-40 opacity-50"></div>
+  
+  <div class="container mx-auto px-4 sm:px-6 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="inline-block py-1 px-3 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium mb-4">Contactează-ne</span>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 font-heading text-primary-800">{data.title}</h2>
+      <p class="text-xl text-gray-600">{data.description}</p>
+    </div>
+    
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <!-- Contact Information Column -->
+        <div class="p-8 md:p-12 bg-indigo-600 text-white">
+          <h3 class="text-2xl font-bold mb-8">Informații de Contact</h3>
+          
+          <div class="space-y-6">
+            <!-- Address -->
+            <div class="flex items-start">
+              <div class="p-3 bg-white/10 rounded-lg mr-5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold mb-1">Adresa noastră</h4>
+                <p class="text-indigo-100">{data.address.address}</p>
+              </div>
+            </div>
+            
+            <!-- Phone -->
+            <div class="flex items-start">
+              <div class="p-3 bg-white/10 rounded-lg mr-5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498.498a1 1 0 01.684.949V9a2 2 0 11-2 2h-4.5a1 1 0 01-.949-.684l-.5-1.5a1 1 0 01.684-.949l3.5-1.5A4 4 0 017 8v4a2 2 0 11-2 2H3a2 2 0 01-2-2V5z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12a4 4 0 015-3.978 4.5 4.5 0 01.971.417.75.75 0 11-.542 1.4 3 3 0 00-.69-.288A3 3 0 0115 12v1.011a3 3 0 01-.938 2.188 3.5 3.5 0 01-2.125 1.055 5 5 0 01-.781-.045 1 1 0 01-.893-1.044c0-.068.005-.136.014-.204A2.5 2.5 0 0112.005 13a4.5 4.5 0 01.054-.689A3 3 0 0112 12z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold mb-1">Telefon</h4>
+                <p class="text-indigo-100">{data.address.phone}</p>
+              </div>
+            </div>
+            
+            <!-- Email -->
+            <div class="flex items-start">
+              <div class="p-3 bg-white/10 rounded-lg mr-5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold mb-1">Email</h4>
+                <p class="text-indigo-100">{data.address.email}</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Social Media Links -->
+          <div class="mt-12">
+            <h4 class="text-lg font-semibold mb-4">Urmărește-ne</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22 12.071c0-5.523-4.477-10-10-10s-10 4.477-10 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54v-2.891h2.54V9.898c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.987C18.343 21.199 22 17.062 22 12.071z"/>
+                </svg>
+              </a>
+              <a href="#" class="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="#" class="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Cambridge Badge -->
+          <div class="mt-12 p-5 bg-white/5 rounded-xl border border-white/10">
+            <div class="flex items-center">
+              <div class="bg-white p-3 rounded-lg mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-lg">Centru Autorizat Cambridge</h4>
+                <p class="text-indigo-100 text-sm">Pregătire și certificare pentru toate nivelurile</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Map Column -->
+        <div class="relative w-full h-full min-h-[400px]">
+          <!-- Map Placeholder - To be replaced with actual map integration -->
+          <div class="absolute inset-0 bg-gray-200 flex items-center justify-center">
+            <div class="text-center p-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+              </svg>
+              <p class="text-gray-600">Hartă interactivă</p>
+              <p class="text-gray-500 text-sm mt-2">Integrează Google Maps sau alt serviciu de hărți pentru a afișa locația școlii tale.</p>
+            </div>
+          </div>
+          
+          <!-- Uncomment and customize this for actual Google Maps integration 
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d YOUR_COORDINATES_HERE!2d YOUR_LONGITUDE!3d YOUR_LATITUDE!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDA4JzU5LjIiTiAyM8KwMzEnMTkuMiJF!5e0!3m2!1sen!2sro!4v1628000000000!5m2!1sen!2sro"
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+          -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

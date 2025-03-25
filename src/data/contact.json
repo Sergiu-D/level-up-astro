@@ -1,0 +1,117 @@
+{
+    "header": {
+        "title": "Contactează Centrul de Limba Engleză Cambridge",
+        "description": "Suntem aici pentru a răspunde la orice întrebări despre cursurile și serviciile noastre de limba engleză."
+    },
+    "contactInfo": {
+        "title": "Contactează-ne",
+        "sections": [
+            {
+                "title": "Informații de Contact",
+                "items": [
+                    {
+                        "label": "Adresă",
+                        "value": "Strada Limbilor 123, Clădirea Cambridge, Etajul 3, Centrul Orașului"
+                    },
+                    {
+                        "label": "Telefon",
+                        "value": "+1 (555) 123-4567"
+                    },
+                    {
+                        "label": "Email",
+                        "value": "info@cambridgeenglishcenter.com"
+                    }
+                ]
+            },
+            {
+                "title": "Program de Funcționare",
+                "hours": [
+                    {
+                        "days": "Luni - Vineri",
+                        "hours": "9:00 - 20:00"
+                    },
+                    {
+                        "days": "Sâmbătă",
+                        "hours": "9:00 - 17:00"
+                    },
+                    {
+                        "days": "Duminică",
+                        "hours": "Închis"
+                    }
+                ]
+            }
+        ],
+        "map": {
+            "note": "Placeholder hartă - va fi înlocuit cu o hartă reală"
+        }
+    },
+    "contactForm": {
+        "title": "Trimite-ne un Mesaj",
+        "fields": [
+            {
+                "id": "name",
+                "label": "Nume Complet",
+                "type": "text",
+                "placeholder": "Numele tău"
+            },
+            {
+                "id": "email",
+                "label": "Adresă de Email",
+                "type": "email",
+                "placeholder": "Emailul tău"
+            },
+            {
+                "id": "phone",
+                "label": "Număr de Telefon",
+                "type": "tel",
+                "placeholder": "Numărul tău de telefon"
+            },
+            {
+                "id": "course",
+                "label": "Curs de Interes",
+                "type": "select",
+                "placeholder": "Selectează un curs",
+                "options": [
+                    {
+                        "value": "yle",
+                        "label": "Young Learners (YLE)"
+                    },
+                    {
+                        "value": "ket",
+                        "label": "Key English Test (KET)"
+                    },
+                    {
+                        "value": "pet",
+                        "label": "Preliminary English Test (PET)"
+                    },
+                    {
+                        "value": "fce",
+                        "label": "First Certificate in English (FCE)"
+                    },
+                    {
+                        "value": "cae",
+                        "label": "Certificate in Advanced English (CAE)"
+                    },
+                    {
+                        "value": "cpe",
+                        "label": "Certificate of Proficiency in English (CPE)"
+                    }
+                ]
+            },
+            {
+                "id": "message",
+                "label": "Mesaj",
+                "type": "textarea",
+                "placeholder": "Mesajul tău",
+                "rows": 5
+            }
+        ],
+        "button": {
+            "text": "Trimite Mesaj"
+        }
+    },
+    "community": {
+        "title": "Alătură-te Comunității Noastre",
+        "description": "Urmărește-ne pe rețelele sociale pentru a fi la curent cu ultimele noutăți și evenimente."
+    }
+}

@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import contactData from "../data/contact.json";
+import { loadDataWithVariables } from "../utils/variables.js";
+import Header from "../components/Header.astro";
+import ContactInfo from "../components/ContactInfo.astro";
+import ContactForm from "../components/ContactForm.astro";
+import Community from "../components/Community.astro";
+
+const processedData = loadDataWithVariables(contactData);
+---
+
+<Layout title="Contact Us">
+  <Header data={processedData.header} />
+
+  <section class="container mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+      <ContactInfo data={processedData.contactInfo} />
+      <ContactForm data={processedData.contactForm} />
+    </div>
+  </section>
+
+  <Community data={processedData.community} />
+</Layout>

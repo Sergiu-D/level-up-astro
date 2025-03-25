@@ -1,0 +1,80 @@
+---
+interface FormField {
+  id: string;
+  label: string;
+  type: string;
+  placeholder: string;
+  rows?: number;
+  options?: {
+    value: string;
+    label: string;
+  }[];
+}
+
+interface ContactFormProps {
+  title: string;
+  fields: FormField[];
+  button: {
+    text: string;
+  };
+}
+
+interface Props {
+  data: ContactFormProps;
+}
+
+const { data } = Astro.props;
+---
+
+<div>
+  <h2 class="text-2xl font-semibold mb-4">
+    {data.title}
+  </h2>
+  <form class="space-y-4">
+    {
+      data.fields.map((field) => (
+        <div>
+          <label for={field.id} class="block mb-1 font-medium">
+            {field.label}
+          </label>
+          {field.type === "textarea" ? (
+            <textarea
+              id={field.id}
+              name={field.id}
+              placeholder={field.placeholder}
+              rows={field.rows || 4}
+              class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-300 focus:border-primary-500 transition duration-200"
+            />
+          ) : field.type === "select" ? (
+            <select
+              id={field.id}
+              name={field.id}
+              class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-300 focus:border-primary-500 transition duration-200"
+            >
+              <option value="">{field.placeholder}</option>
+              {field.options &&
+                field.options.map((option) => (
+                  <option value={option.value}>{option.label}</option>
+                ))}
+            </select>
+          ) : (
+            <input
+              type={field.type}
+              id={field.id}
+              name={field.id}
+              placeholder={field.placeholder}
+              class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-300 focus:border-primary-500 transition duration-200"
+            />
+          )}
+        </div>
+      ))
+    }
+
+    <button
+      type="submit"
+      class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700"
+    >
+      {data.button.text}
+    </button>
+  </form>
+</div>

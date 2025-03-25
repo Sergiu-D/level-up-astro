@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import homeData from '../data/home.json';
+import { loadDataWithVariables } from '../utils/variables.js';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Services from '../components/Services.astro';
+import CTA from '../components/CTA.astro';
+import Contact from '../components/Contact.astro';
+
+const processedData = loadDataWithVariables(homeData) as any;
+---
+
+<Layout title="English School - Cambridge | Cambridge English School">
+	<main>
+		<Hero data={processedData.hero} />
+		<Features data={processedData.features} />
+		<Services data={processedData.services} />
+		<Testimonials data={processedData.testimonials} />
+		<CTA data={processedData.cta} />
+		<Contact data={processedData.contact} />
+	</main>
+</Layout>

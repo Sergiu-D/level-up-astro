@@ -1,0 +1,97 @@
+{
+  "header": {
+    "title": "Cursurile Noastre Cambridge English",
+    "description": "Oferim o gamă completă de cursuri Cambridge English pentru toate nivelurile și grupele de vârstă."
+  },
+  "courses": [
+    {
+      "title": "Cambridge English: Young Learners (YLE)",
+      "description": "Cursuri de engleză bazate pe activități distractive, concepute special pentru copiii cu vârste între 7-12 ani. Aceste clase dezvoltă încrederea și abilitățile lingvistice prin jocuri și exerciții interactive.",
+      "levels": [
+        "Starters (Pre A1)",
+        "Movers (A1)",
+        "Flyers (A2)"
+      ],
+      "details": {
+        "ageGroup": "7-12 ani",
+        "classSize": "Maximum 10 studenți"
+      }
+    },
+    {
+      "title": "Cambridge English: Key (KET)",
+      "description": "O calificare de nivel de bază care demonstrează că poți folosi engleza pentru a comunica în situații simple. KET este primul pas în călătoria ta de învățare a limbii.",
+      "components": [
+        "Citire și Scriere",
+        "Ascultare",
+        "Vorbire"
+      ],
+      "details": {
+        "level": "A2",
+        "classSize": "Maximum 12 studenți"
+      }
+    },
+    {
+      "title": "Cambridge English: Preliminary (PET)",
+      "description": "Demonstrează că poți comunica în engleză în situații practice, de zi cu zi. Această calificare de nivel intermediar te va ajuta să-ți dezvolți abilitățile lingvistice pentru muncă, studiu și călătorii.",
+      "components": [
+        "Citire și Scriere",
+        "Ascultare",
+        "Vorbire"
+      ],
+      "details": {
+        "level": "B1",
+        "classSize": "Maximum 12 studenți"
+      }
+    },
+    {
+      "title": "Cambridge English: First (FCE)",
+      "description": "Dovedește că ai abilitățile lingvistice necesare pentru a trăi și lucra independent într-un mediu anglofon. FCE este o calificare de nivel intermediar superior.",
+      "components": [
+        "Citire și Utilizarea Limbii",
+        "Scriere",
+        "Ascultare",
+        "Vorbire"
+      ],
+      "details": {
+        "level": "B2",
+        "classSize": "Maximum 10 studenți"
+      }
+    },
+    {
+      "title": "Cambridge English: Advanced (CAE)",
+      "description": "Arată că ai capacitatea lingvistică de a efectua cercetări complexe și de a comunica eficient la nivel profesional. CAE este recunoscut pe scară largă de universități și angajatori din întreaga lume.",
+      "components": [
+        "Citire și Utilizarea Limbii",
+        "Scriere",
+        "Ascultare",
+        "Vorbire"
+      ],
+      "details": {
+        "level": "C1",
+        "classSize": "Maximum 8 studenți"
+      }
+    },
+    {
+      "title": "Cambridge English: Proficiency (CPE)",
+      "description": "Calificarea noastră de cel mai înalt nivel, care arată că ai stăpânit limba engleză la un nivel excepțional. Dovedește că poți comunica cu fluență și sofisticare similar cu un vorbitor nativ.",
+      "components": [
+        "Citire și Utilizarea Limbii",
+        "Scriere",
+        "Ascultare",
+        "Vorbire"
+      ],
+      "details": {
+        "level": "C2",
+        "classSize": "Maximum 6 studenți"
+      }
+    }
+  ],
+  "cta": {
+    "title": "Program Cursuri și Înscriere",
+    "description": "Contactează-ne pentru a afla despre programul actual al cursurilor și opțiunile de înscriere.",
+    "button": {
+      "text": "Înscrie-te Acum",
+      "url": "/contact"
+    }
+  }
+}

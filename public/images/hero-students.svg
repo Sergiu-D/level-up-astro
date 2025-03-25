@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" style="background-color: #f1f5ff;">
+  <!-- Background elements -->
+  <rect x="0" y="0" width="800" height="600" fill="#f1f5ff" />
+  
+  <!-- Decorative elements -->
+  <circle cx="150" cy="120" r="100" fill="#818cf8" opacity="0.2" />
+  <circle cx="650" cy="480" r="130" fill="#f472b6" opacity="0.2" />
+  <circle cx="400" cy="100" r="70" fill="#34d399" opacity="0.2" />
+  <circle cx="200" cy="450" r="90" fill="#fbbf24" opacity="0.2" />
+  
+  <!-- Cambridge logo placeholder -->
+  <rect x="620" y="80" width="130" height="70" rx="10" fill="#4f46e5" />
+  <text x="685" y="125" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Cambridge</text>
+  
+  <!-- English Letters Background -->
+  <text x="120" y="180" font-family="Arial" font-size="120" fill="#e0e7ff" font-weight="bold">A</text>
+  <text x="250" y="280" font-family="Arial" font-size="120" fill="#e0e7ff" font-weight="bold">B</text>
+  <text x="380" y="180" font-family="Arial" font-size="120" fill="#e0e7ff" font-weight="bold">C</text>
+  <text x="500" y="280" font-family="Arial" font-size="120" fill="#e0e7ff" font-weight="bold">1</text>
+  <text x="620" y="180" font-family="Arial" font-size="120" fill="#e0e7ff" font-weight="bold">2</text>
+  
+  <!-- Student 1 (child) - More colorful character -->
+  <circle cx="200" cy="300" r="45" fill="#ec4899" />
+  <circle cx="200" cy="210" r="35" fill="#fcd34d" />
+  <rect x="178" y="335" width="45" height="110" rx="15" fill="#ec4899" />
+  <rect x="165" y="445" width="25" height="60" rx="8" fill="#fcd34d" />
+  <rect x="210" y="445" width="25" height="60" rx="8" fill="#fcd34d" />
+  <rect x="150" y="350" width="25" height="70" rx="8" fill="#ec4899" />
+  <rect x="225" y="350" width="25" height="70" rx="8" fill="#ec4899" />
+  
+  <!-- Fun Elements for Child -->
+  <circle cx="180" cy="205" r="7" fill="white" />
+  <circle cx="220" cy="205" r="7" fill="white" />
+  <path d="M185 230 Q200 245 215 230" fill="none" stroke="white" stroke-width="4" />
+  <circle cx="175" cy="120" r="15" fill="#fcd34d" opacity="0.7" />
+  <circle cx="215" cy="150" r="10" fill="#ec4899" opacity="0.7" />
+  
+  <!-- Student 2 (teenager) -->
+  <circle cx="400" cy="300" r="45" fill="#3b82f6" />
+  <circle cx="400" cy="210" r="35" fill="#fcd34d" />
+  <rect x="375" y="335" width="50" height="130" rx="15" fill="#3b82f6" />
+  <rect x="360" y="465" width="25" height="60" rx="8" fill="#fcd34d" />
+  <rect x="415" y="465" width="25" height="60" rx="8" fill="#fcd34d" />
+  <rect x="345" y="350" width="25" height="70" rx="8" fill="#3b82f6" />
+  <rect x="430" y="350" width="25" height="70" rx="8" fill="#3b82f6" />
+  
+  <!-- Fun Elements for Teenager -->
+  <circle cx="380" cy="205" r="7" fill="white" />
+  <circle cx="420" cy="205" r="7" fill="white" />
+  <path d="M385 230 Q400 240 415 230" fill="none" stroke="white" stroke-width="4" />
+  <rect x="370" cy="170" width="60" height="15" rx="5" fill="#3b82f6" opacity="0.7" />
+  
+  <!-- Student 3 (adult) -->
+  <circle cx="600" cy="300" r="45" fill="#8b5cf6" />
+  <circle cx="600" cy="210" r="35" fill="#fcd34d" />
+  <rect x="575" y="335" width="50" height="150" rx="15" fill="#8b5cf6" />
+  <rect x="560" y="485" width="25" height="60" rx="8" fill="#fcd34d" />
+  <rect x="615" y="485" width="25" height="60" rx="8" fill="#fcd34d" />
+  <rect x="545" y="350" width="25" height="80" rx="8" fill="#8b5cf6" />
+  <rect x="630" y="350" width="25" height="80" rx="8" fill="#8b5cf6" />
+  
+  <!-- Fun Elements for Adult -->
+  <circle cx="580" cy="205" r="7" fill="white" />
+  <circle cx="620" cy="205" r="7" fill="white" />
+  <path d="M585 230 Q600 240 615 230" fill="none" stroke="white" stroke-width="4" />
+  <rect x="585" y="180" width="30" height="5" rx="2" fill="white" />
+  
+  <!-- Interactive elements -->
+  <circle cx="300" cy="400" r="25" fill="#fbbf24" opacity="0.8" />
+  <circle cx="500" cy="420" r="20" fill="#34d399" opacity="0.8" />
+  <circle cx="350" cy="480" r="15" fill="#ec4899" opacity="0.8" />
+  <circle cx="450" cy="500" r="18" fill="#3b82f6" opacity="0.8" />
+  
+  <!-- English Elements -->
+  <text x="70" y="120" font-family="Arial" font-size="30" fill="#4f46e5" font-weight="bold">A</text>
+  <text x="120" y="150" font-family="Arial" font-size="30" fill="#4f46e5" font-weight="bold">B</text>
+  <text x="170" y="120" font-family="Arial" font-size="30" fill="#4f46e5" font-weight="bold">C</text>
+  <text x="490" y="140" font-family="Arial" font-size="30" fill="#4f46e5" font-weight="bold">1</text>
+  <text x="540" y="170" font-family="Arial" font-size="30" fill="#4f46e5" font-weight="bold">2</text>
+  <text x="440" y="170" font-family="Arial" font-size="30" fill="#4f46e5" font-weight="bold">3</text>
+</svg> 

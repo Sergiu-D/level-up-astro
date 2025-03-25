@@ -1,0 +1,52 @@
+---
+interface MethodologyProps {
+  title: string;
+  description: string;
+  points: string[];
+}
+
+interface FacilitiesProps {
+  title: string;
+  description: string;
+}
+
+interface ApproachProps {
+  title: string;
+  description: string;
+  methodology: MethodologyProps;
+  facilities: FacilitiesProps;
+}
+
+interface Props {
+  data: ApproachProps;
+}
+
+const { data } = Astro.props;
+---
+
+<div class="bg-white p-6 rounded-xl shadow-card">
+  <h2 class="text-2xl font-heading font-semibold mb-4 text-primary-700">
+    {data.title}
+  </h2>
+  <p class="mb-4">{data.description}</p>
+
+  <div class="mb-6 bg-primary-50 p-4 rounded-lg">
+    <h3 class="text-xl font-heading font-semibold mb-2 text-primary-600">
+      {data.methodology.title}
+    </h3>
+    <p class="mb-4">{data.methodology.description}</p>
+    <ul class="list-disc pl-5 mb-4 text-gray-700">
+      {data.methodology.points.map((point) => <li>{point}</li>)}
+    </ul>
+  </div>
+
+  <div
+    class="h-48 bg-gradient-to-r from-secondary-100 to-primary-100 rounded-lg mb-6 overflow-hidden shadow-soft"
+  >
+  </div>
+
+  <h3 class="text-xl font-heading font-semibold mb-2 text-primary-600">
+    {data?.facilities?.title}
+  </h3>
+  <p>{data?.facilities?.description}</p>
+</div>

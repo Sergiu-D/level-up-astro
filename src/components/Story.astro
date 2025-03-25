@@ -1,0 +1,20 @@
+---
+interface StoryProps {
+  title: string;
+  paragraphs: string[];
+}
+
+interface Props {
+  data: StoryProps;
+}
+
+const { data } = Astro.props;
+---
+
+<div class="bg-white p-6 rounded-xl shadow-card">
+  <div class="h-80 bg-gradient-to-r from-primary-100 to-secondary-100 rounded-lg mb-6 overflow-hidden"></div>
+  <h2 class="text-2xl font-heading font-semibold mb-4 text-primary-700">{data.title}</h2>
+  {data.paragraphs.map((paragraph, index) => (
+    <p class={index < data.paragraphs.length - 1 ? "mb-4" : ""}>{paragraph}</p>
+  ))}
+</div>

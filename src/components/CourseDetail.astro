@@ -1,0 +1,46 @@
+---
+interface CourseDetails {
+  ageGroup?: string;
+  level?: string;
+  classSize: string;
+}
+
+interface CourseProps {
+  title: string;
+  description: string;
+  levels?: string[];
+  components?: string[];
+  details: CourseDetails;
+}
+
+interface Props {
+  data: CourseProps;
+}
+
+const { data } = Astro.props;
+---
+
+<div class="bg-white rounded-xl shadow-card hover:shadow-lg transition-all duration-300 overflow-hidden">
+  <div class="p-6">
+    <h2 class="text-2xl font-heading font-semibold mb-4 text-primary-700">{data.title}</h2>
+    <div class="mb-4 h-48 bg-gradient-to-r from-primary-200 to-secondary-200 rounded-lg overflow-hidden"></div>
+    <p class="mb-4">{data.description}</p>
+    <ul class="list-disc pl-5 mb-4 text-gray-700">
+      {data.levels && data.levels.map(level => (
+        <li>{level}</li>
+      ))}
+      {data.components && data.components.map(component => (
+        <li>{component}</li>
+      ))}
+    </ul>
+    <div class="border-t border-primary-100 pt-4 mt-4">
+      {data.details.ageGroup && (
+        <p class="font-semibold text-primary-700">Age Group: {data.details.ageGroup}</p>
+      )}
+      {data.details.level && (
+        <p class="font-semibold text-primary-700">Level: {data.details.level}</p>
+      )}
+      <p class="font-semibold text-primary-700">Class Size: {data.details.classSize}</p>
+    </div>
+  </div>
+</div>

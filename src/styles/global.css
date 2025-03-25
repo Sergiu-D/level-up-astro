@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@layer utilities {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 84% 4.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 84% 4.9%;
+
+        --primary: 222.2 47.4% 11.2%;
+        --primary-foreground: 210 40% 98%;
+
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+
+        --accent: 210 40% 96.1%;
+        --accent-foreground: 222.2 47.4% 11.2%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 222.2 84% 4.9%;
+
+        --radius: 0.5rem;
+    }
+}
+
+.section-full {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+}
+
+.section-full > div {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .section-full > div {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-full > div {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-full > div {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-full > div {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .section-full > div {
+    max-width: 1536px;
+  }
+}

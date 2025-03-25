@@ -1,0 +1,67 @@
+---
+interface ContactItem {
+  label: string;
+  value: string;
+}
+
+interface HourItem {
+  days: string;
+  hours: string;
+}
+
+interface ContactSection {
+  title: string;
+  items?: ContactItem[];
+  hours?: HourItem[];
+}
+
+interface ContactInfoProps {
+  title: string;
+  sections: ContactSection[];
+  map: {
+    note: string;
+  };
+}
+
+interface Props {
+  data: ContactInfoProps;
+}
+
+const { data } = Astro.props;
+---
+
+<div>
+  <h2 class="text-2xl font-semibold mb-4">
+    {data.title}
+  </h2>
+  {
+    data.sections.map((section) => (
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-2">{section.title}</h3>
+        {section.items && (
+          <ul class="space-y-3">
+            {section.items.map((item) => (
+              <li class="flex items-start">
+                <span class="font-semibold mr-2">{item.label}:</span>
+                <span>{item.value}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+        {section.hours && (
+          <ul class="space-y-1">
+            {section.hours.map((hour) => (
+              <li class="flex justify-between">
+                <span>{hour.days}:</span>
+                <span>{hour.hours}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    ))
+  }
+
+  <div class="h-64 bg-gray-200 mb-6"></div>
+  <p class="text-sm">{data.map.note}</p>
+</div>
