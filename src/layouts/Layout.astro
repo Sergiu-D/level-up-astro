@@ -17,6 +17,7 @@ const copyright = replaceVariables("{{common.copyright}}").replace(
   new Date().getFullYear().toString()
 );
 const processedVariables = loadDataWithVariables(variablesData);
+const processedLayout = loadDataWithVariables(layoutData) as any;
 
 // Add Google Fonts
 const fontImportUrl =
@@ -36,18 +37,20 @@ const fontImportUrl =
     <header id="main-header" class="fixed top-0 w-full z-50 transition-all duration-300">
       <div
         id="header-container"
-        class="container mx-auto flex flex-col md:flex-row justify-between items-center py-6 px-8 transition-all duration-300"
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center py-4 px-6 transition-all duration-300"
       >
-        <div
-          class="w-full md:w-auto flex justify-between items-center"
-        >
-          <div class="text-2xl font-heading font-bold animate-fade-in text-primary-800 flex items-center">
-            <span class="bg-blue-700 text-white p-2 rounded-lg mr-2 shadow-md">C</span>
-            {siteName}
-          </div>
+        <div class="w-full md:w-auto flex justify-between items-center">
+          <a href="/" class="text-2xl font-heading font-bold animate-fade-in text-primary-800 flex items-center group">
+            <span class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-2 rounded-lg mr-2 shadow-md group-hover:shadow-lg transition-all duration-300 transform group-hover:scale-105">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </span>
+            <span class="transition-colors duration-300 group-hover:text-primary-600">{siteName}</span>
+          </a>
           
           <!-- Hamburger menu button - only visible on mobile -->
-          <button id="menu-toggle" class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-100 focus:outline-none">
+          <button id="menu-toggle" class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-100 focus:outline-none transition-all duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -56,23 +59,24 @@ const fontImportUrl =
         
         <!-- Navigation - hidden on mobile until toggled -->
         <nav id="mobile-nav" class="hidden md:block w-full md:w-auto transition-all duration-300 overflow-hidden">
-          <ul class="flex flex-col md:flex-row md:flex-wrap gap-4 font-medium mt-4 md:mt-0">
+          <ul class="flex flex-col md:flex-row md:items-center md:space-x-1 font-medium mt-4 md:mt-0">
             {
-              (processedVariables as any).navigation?.items?.map(
-                (item: any, index: number) => (
-                  <li class="w-full md:w-auto">
-                    <a
-                      href={item.url}
-                      class={`transition duration-300 ease-in-out px-4 py-3 md:py-2 rounded-md w-full block text-center md:inline ${
-                        index === (processedVariables as any).navigation?.items?.length - 1
-                          ? "bg-blue-700 text-white hover:bg-blue-600 hover:text-white shadow-sm"
-                          : "text-primary-800 hover:text-primary-600 hover:bg-white/90 backdrop-blur-sm"
-                      }`}
-                    >
-                      {item.text}
-                    </a>
-                  </li>
-                )
+              processedLayout?.navigation?.items?.map(
+                (item: any, index: number) => {
+                  const isLast = index === processedLayout?.navigation?.items?.length - 1;
+                  return (
+                    <li class="w-full md:w-auto my-1 md:my-0">
+                      <a
+                        href={item.url}
+                        class={`transition-all duration-300 ease-in-out px-4 py-2.5 rounded-lg w-full block text-center md:inline-block ${isLast 
+                          ? "bg-gradient-to-r from-blue-600 to-indigo-700 text-white hover:shadow-lg hover:translate-y-[-2px] shadow-md" 
+                          : "text-primary-800 hover:text-primary-600 hover:bg-white/90 backdrop-blur-sm hover:shadow-md"}`}
+                      >
+                        {item.text}
+                      </a>
+                    </li>
+                  );
+                }
               )
             }
           </ul>
