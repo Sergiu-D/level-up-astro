@@ -1,4 +1,12 @@
 {
+  "navigation": {
+    "items": [
+      { "text": "Acasă", "url": "/" },
+      { "text": "Cursuri", "url": "/classes" },
+      { "text": "Despre", "url": "/about" },
+      { "text": "Contact", "url": "/contact" }
+    ]
+  },
   "footer": {
     "description": "Oferim cursuri de limba engleză de înaltă calitate folosind metodologia Cambridge, adaptate pentru toate vârstele. Programele noastre sunt concepute pentru a dezvolta competențe lingvistice solide și pentru a pregăti elevii pentru certificările internaționale.",
     "links": {
