@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 import variablesData from "../data/variables.json";
+import homeData from "../data/home.json";
+import layoutData from "../data/layout.json";
 import { replaceVariables, loadDataWithVariables } from "../utils/variables.js";
 import Footer from "../components/Footer.astro";
 
@@ -82,7 +84,7 @@ const fontImportUrl =
       <slot />
     </main>
 
-    <Footer siteName={siteName} copyright={copyright} />
+    <Footer siteName={siteName} copyright={copyright} footerData={layoutData.footer} />
     
     <style>
       @keyframes slideIn {
