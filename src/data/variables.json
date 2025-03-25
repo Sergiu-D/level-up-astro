@@ -42,25 +42,5 @@
         "cta_url": "/contact",
         "learn_more": "Află mai multe",
         "enroll_now": "Înscrie-te Acum"
-    },
-    "navigation": {
-        "items": [
-            {
-                "text": "Acasă",
-                "url": "/"
-            },
-            {
-                "text": "Cursuri",
-                "url": "/classes"
-            },
-            {
-                "text": "Despre",
-                "url": "/about"
-            },
-            {
-                "text": "Contact",
-                "url": "/contact"
-            }
-        ]
     }
 }
