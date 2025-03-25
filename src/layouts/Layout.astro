@@ -66,15 +66,15 @@ const fontImportUrl =
                   const isLast = index === processedLayout?.navigation?.items?.length - 1;
                   return (
                     <li class="w-full md:w-auto my-1 md:my-0">
-                      <a
-                        href={item.url}
+                    <a
+                      href={item.url}
                         class={`transition-all duration-300 ease-in-out px-4 py-2.5 rounded-lg w-full block text-center md:inline-block ${isLast 
                           ? "bg-gradient-to-r from-blue-600 to-indigo-700 text-white hover:shadow-lg hover:translate-y-[-2px] shadow-md" 
                           : "text-primary-800 hover:text-primary-600 hover:bg-white/90 backdrop-blur-sm hover:shadow-md"}`}
-                      >
-                        {item.text}
-                      </a>
-                    </li>
+                    >
+                      {item.text}
+                    </a>
+                  </li>
                   );
                 }
               )
