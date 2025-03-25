@@ -1,7 +1,67 @@
 {
   "header": {
-    "title": "Cursurile Noastre Cambridge English",
-    "description": "Oferim o gamă completă de cursuri Cambridge English pentru toate nivelurile și grupele de vârstă."
+    "badge": "Cursuri Cambridge",
+    "title": "Cambridge Exam Preparation pentru Copii și Adolescenți",
+    "description": "Oferim cursuri specializate Cambridge care dezvoltă competențele lingvistice într-un mod interactiv și distractiv, adaptate perfect pentru copii și adolescenți.",
+    "image": "/images/hero-classes.jpg"
+  },
+  "intro": {
+    "title": "Cursuri de engleză potrivite pentru fiecare vârstă",
+    "description": "La școala noastră, fiecare copil și adolescent primește atenția și suportul necesar pentru a excela în învățarea limbii engleze și pregătirea pentru examenele Cambridge."
+  },
+  "keyFeatures": {
+    "title": "Caracteristici Evidențiate",
+    "description": "Descoperiți caracteristicile cheie ale programului nostru de pregătire Cambridge care ne diferențiază",
+    "items": [
+      {
+        "title": "Tutori Experimentați",
+        "description": "Profesori certificați Cambridge cu experiență vastă în predarea copiilor și adolescenților",
+        "icon": "academic-cap"
+      },
+      {
+        "title": "Planuri Personalizate",
+        "description": "Planuri de studiu adaptate nevoilor individuale ale fiecărui elev pentru rezultate optime",
+        "icon": "clipboard-check"
+      },
+      {
+        "title": "Rezultate Dovedite",
+        "description": "Rata ridicată de succes și rezultate excelente obținute de elevii noștri la examenele Cambridge",
+        "icon": "badge-check"
+      }
+    ]
+  },
+  "featuresList": {
+    "title": "Lista Caracteristici Evidențiate",
+    "description": "Programul nostru de pregătire Cambridge oferă:",
+    "items": [
+      "Examene practice regulate care simulează condițiile reale de testare",
+      "Sesiuni interactive de învățare cu focus pe toate componentele examenului",
+      "Feedback detaliat și personalizat pentru îmbunătățirea continuă",
+      "Materiale didactice interactive și atractive pentru copii și adolescenți",
+      "Activități de grup care stimulează comunicarea și colaborarea",
+      "Aplicații și resurse online pentru practică suplimentară acasă"
+    ]
+  },
+  "howItWorks": {
+    "title": "Cum Funcționează",
+    "description": "Procesul nostru de pregătire pentru examenele Cambridge:",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Evaluare Inițială",
+        "description": "Evaluăm nivelul actual de engleză și stabilim obiectivele pentru examen"
+      },
+      {
+        "number": "2",
+        "title": "Plan Personalizat",
+        "description": "Creăm un plan de studiu adaptat vârstei și obiectivelor specifice ale copilului"
+      },
+      {
+        "number": "3",
+        "title": "Pregătire Interactivă",
+        "description": "Sesiuni de pregătire focusate pe toate componentele examenului, prin metode interactive și distractive"
+      }
+    ]
   },
   "courses": [
     {
@@ -14,12 +74,19 @@
       ],
       "details": {
         "ageGroup": "7-12 ani",
-        "classSize": "Maximum 10 studenți"
+        "classSize": "Maximum 10 studenți",
+        "features": [
+          "Activități bazate pe joc și povești",
+          "Exerciții creative de scriere și vorbire",
+          "Jocuri interactive digitale",
+          "Simulări de examen adaptate pentru copii"
+        ],
+        "image": "/images/young-learners.jpg"
       }
     },
     {
-      "title": "Cambridge English: Key (KET)",
-      "description": "O calificare de nivel de bază care demonstrează că poți folosi engleza pentru a comunica în situații simple. KET este primul pas în călătoria ta de învățare a limbii.",
+      "title": "Cambridge English: Key for Schools (KET)",
+      "description": "O calificare de nivel de bază pentru elevi, care demonstrează că pot folosi engleza pentru a comunica în situații simple. KET este primul pas în călătoria de învățare a limbii pentru adolescenți.",
       "components": [
         "Citire și Scriere",
         "Ascultare",
@@ -27,12 +94,20 @@
       ],
       "details": {
         "level": "A2",
-        "classSize": "Maximum 12 studenți"
+        "ageGroup": "12-14 ani",
+        "classSize": "Maximum 12 studenți",
+        "features": [
+          "Comunicare practică în situații cotidiene",
+          "Activități interactive de grup",
+          "Exerciții bazate pe teme relevante pentru adolescenți",
+          "Simulări de examen cu feedback personalizat"
+        ],
+        "image": "/images/ket-course.jpg"
       }
     },
     {
-      "title": "Cambridge English: Preliminary (PET)",
-      "description": "Demonstrează că poți comunica în engleză în situații practice, de zi cu zi. Această calificare de nivel intermediar te va ajuta să-ți dezvolți abilitățile lingvistice pentru muncă, studiu și călătorii.",
+      "title": "Cambridge English: Preliminary for Schools (PET)",
+      "description": "Demonstrează că adolescenții pot comunica în engleză în situații practice, de zi cu zi. Această calificare de nivel intermediar îi va ajuta să își dezvolte abilitățile lingvistice pentru școală, activități sociale și călătorii.",
       "components": [
         "Citire și Scriere",
         "Ascultare",
@@ -40,12 +115,20 @@
       ],
       "details": {
         "level": "B1",
-        "classSize": "Maximum 12 studenți"
+        "ageGroup": "14-17 ani",
+        "classSize": "Maximum 12 studenți",
+        "features": [
+          "Dezvoltarea vocabularului specific adolescenților",
+          "Exprimare în situații sociale și școlare",
+          "Proiecte colaborative în engleză",
+          "Tehnologii multimedia în procesul de învățare"
+        ],
+        "image": "/images/pet-course.jpg"
       }
     },
     {
-      "title": "Cambridge English: First (FCE)",
-      "description": "Dovedește că ai abilitățile lingvistice necesare pentru a trăi și lucra independent într-un mediu anglofon. FCE este o calificare de nivel intermediar superior.",
+      "title": "Cambridge English: First for Schools (FCE)",
+      "description": "Dovedește că adolescenții au abilitățile lingvistice necesare pentru studii avansate și comunicare la nivel internațional. FCE este o calificare de nivel intermediar superior, recunoscută de universități din întreaga lume.",
       "components": [
         "Citire și Utilizarea Limbii",
         "Scriere",
@@ -54,43 +137,101 @@
       ],
       "details": {
         "level": "B2",
-        "classSize": "Maximum 10 studenți"
-      }
-    },
-    {
-      "title": "Cambridge English: Advanced (CAE)",
-      "description": "Arată că ai capacitatea lingvistică de a efectua cercetări complexe și de a comunica eficient la nivel profesional. CAE este recunoscut pe scară largă de universități și angajatori din întreaga lume.",
-      "components": [
-        "Citire și Utilizarea Limbii",
-        "Scriere",
-        "Ascultare",
-        "Vorbire"
-      ],
-      "details": {
-        "level": "C1",
-        "classSize": "Maximum 8 studenți"
-      }
-    },
-    {
-      "title": "Cambridge English: Proficiency (CPE)",
-      "description": "Calificarea noastră de cel mai înalt nivel, care arată că ai stăpânit limba engleză la un nivel excepțional. Dovedește că poți comunica cu fluență și sofisticare similar cu un vorbitor nativ.",
-      "components": [
-        "Citire și Utilizarea Limbii",
-        "Scriere",
-        "Ascultare",
-        "Vorbire"
-      ],
-      "details": {
-        "level": "C2",
-        "classSize": "Maximum 6 studenți"
+        "ageGroup": "15-18 ani",
+        "classSize": "Maximum 10 studenți",
+        "features": [
+          "Pregătire academică pentru studii internaționale",
+          "Dezvoltarea gândirii critice în limba engleză",
+          "Abilități avansate de comunicare și prezentare",
+          "Strategii eficiente pentru toate componentele examenului"
+        ],
+        "image": "/images/fce-course.jpg"
       }
     }
   ],
+  "pricing": {
+    "title": "Prețuri și Tarife",
+    "description": "Oferim pachete flexibile pentru a se potrivi nevoilor și bugetului familiei tale:",
+    "packages": [
+      {
+        "name": "Pachet Standard",
+        "tagline": "Pentru pregătire de bază",
+        "price": "300€",
+        "period": "curs",
+        "color": "blue",
+        "features": [
+          "12 sesiuni de pregătire",
+          "Materiale de studiu",
+          "1 examen de practică"
+        ],
+        "buttonText": "Înscrie-te Acum",
+        "buttonUrl": "/contact"
+      },
+      {
+        "name": "Pachet Premium",
+        "tagline": "Pentru pregătire completă",
+        "price": "500€",
+        "period": "curs",
+        "color": "purple",
+        "popular": true,
+        "features": [
+          "20 sesiuni de pregătire",
+          "Materiale de studiu premium",
+          "3 examene de practică",
+          "Sesiuni individuale de feedback"
+        ],
+        "buttonText": "Înscrie-te Acum",
+        "buttonUrl": "/contact"
+      },
+      {
+        "name": "Pachet VIP",
+        "tagline": "Pentru pregătire intensivă",
+        "price": "800€",
+        "period": "curs",
+        "color": "gray",
+        "features": [
+          "30 sesiuni de pregătire",
+          "Toate materialele de studiu",
+          "5 examene de practică",
+          "Coaching individual",
+          "Garanția promovării examenului"
+        ],
+        "buttonText": "Înscrie-te Acum",
+        "buttonUrl": "/contact"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Întrebări Frecvente",
+    "description": "Răspunsuri la cele mai comune întrebări despre cursurile și examenele Cambridge pentru copii și adolescenți",
+    "questions": [
+      {
+        "question": "La ce vârstă poate copilul meu să înceapă cursurile Cambridge?",
+        "answer": "Putem primi copii de la vârsta de 7 ani pentru programul Young Learners. Pentru copiii mai mici de 7 ani, oferim cursuri introductive care îi pregătesc pentru programul Cambridge."
+      },
+      {
+        "question": "Cât timp durează un curs de pregătire Cambridge?",
+        "answer": "Durata variază în funcție de nivelul actual și obiectivele copilului. În general, cursurile noastre durează între 3 și 6 luni, cu sesiuni săptămânale de 1-2 ore, în funcție de vârsta și nivelul de atenție al copilului."
+      },
+      {
+        "question": "Cum mă asigur că copilul meu se descurcă bine în timpul cursului?",
+        "answer": "Oferim rapoarte de progres regulate și întâlniri cu părinții pentru a discuta evoluția copilului. De asemenea, aveți acces la o platformă online unde puteți vedea progresul, temele și rezultatele la testele practice."
+      },
+      {
+        "question": "Ce se întâmplă dacă copilul meu nu se poate adapta la grupă?",
+        "answer": "Înțelegem că fiecare copil are propriul ritm de învățare. Dacă observăm că un copil are dificultăți în a se adapta, oferim opțiuni precum sesiuni suplimentare individuale sau, dacă este necesar, realocarea într-o grupă mai potrivită nivelului său."
+      },
+      {
+        "question": "Cum sunt organizate cursurile pentru a menține atenția copiilor?",
+        "answer": "Cursurile noastre sunt special concepute cu activități variate care se schimbă la fiecare 10-15 minute pentru cei mici și 20-30 minute pentru adolescenți. Combinăm exerciții interactive, jocuri educative, utilizarea tehnologiei și proiecte creative pentru a menține elevii angajați și motivați."
+      }
+    ]
+  },
   "cta": {
-    "title": "Program Cursuri și Înscriere",
-    "description": "Contactează-ne pentru a afla despre programul actual al cursurilor și opțiunile de înscriere.",
+    "title": "Pregătește-ți copilul pentru succes global",
+    "description": "Contactează-ne astăzi pentru a programa o evaluare gratuită și pentru a afla cum putem ajuta copilul tău să exceleze în limba engleză.",
     "button": {
-      "text": "Înscrie-te Acum",
+      "text": "Programează o Evaluare Gratuită",
       "url": "/contact"
     }
   }
