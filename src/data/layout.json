@@ -1,0 +1,46 @@
+{
+  "navigation": {
+    "items": [
+      { "text": "Acasă", "url": "/" },
+      { "text": "Cursuri", "url": "/classes" },
+      { "text": "Despre", "url": "/about" },
+      { "text": "Contact", "url": "/contact" }
+    ]
+  },
+  "footer": {
+    "description": "Oferim cursuri de limba engleză de înaltă calitate folosind metodologia Cambridge, adaptate pentru toate vârstele. Programele noastre sunt concepute pentru a dezvolta competențe lingvistice solide și pentru a pregăti elevii pentru certificările internaționale.",
+    "links": {
+      "courses": {
+        "title": "Cursuri",
+        "items": [
+          { "text": "Pentru copii", "url": "/courses/children" },
+          { "text": "Pentru adolescenți", "url": "/courses/teenagers" },
+          { "text": "Pentru adulți", "url": "/courses/adults" },
+          { "text": "Business English", "url": "/courses/business" }
+        ]
+      },
+      "info": {
+        "title": "Informații",
+        "items": [
+          { "text": "Despre noi", "url": "/about" },
+          { "text": "Metodologia Cambridge", "url": "/methodology" },
+          { "text": "Întrebări frecvente", "url": "/faq" },
+          { "text": "Contact", "url": "/contact" }
+        ]
+      }
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "program": {
+      "title": "Program",
+      "note": "* Pentru programări în afara orelor de program, vă rugăm să ne contactați telefonic."
+    },
+    "social": {
+      "facebook": "#",
+      "instagram": "#",
+      "twitter": "#"
+    },
+    "copyright": "Design cu ♥ pentru educație"
+  }
+}
