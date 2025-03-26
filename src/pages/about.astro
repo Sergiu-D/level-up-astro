@@ -6,7 +6,7 @@ import Header from '../components/Header.astro';
 import Story from '../components/Story.astro';
 import Approach from '../components/Approach.astro';
 import Team from '../components/Team.astro';
-import CTA from '../components/CTA.astro';
+import ContactCTA from '../components/ContactCTA.astro';
 
 const processedData = loadDataWithVariables(aboutData) as any;
 ---
@@ -23,7 +23,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
   
   <Team data={processedData.team} />
   
-  <CTA data={{
+  <ContactCTA data={{
     title: processedData.accreditations.title,
     description: processedData.accreditations.description,
     button: {
