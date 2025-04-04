@@ -1,4 +1,7 @@
 ---
+import SectionTitle from '../components/SectionTitle.astro';
+import Card from '../components/Card.astro';
+
 interface TestimonialItem {
   text: string;
   author: string;
@@ -42,17 +45,26 @@ const testimonialColors = [
     <div class="absolute top-0 right-1/4 w-64 h-64 bg-blue-200 opacity-20 rounded-full"></div>
     <div class="absolute bottom-0 left-1/3 w-80 h-80 bg-purple-200 opacity-20 rounded-full"></div>
   </div>
-  
+
   <div class="container mx-auto px-4 relative z-10">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center font-heading text-primary-800 animate-fade-in">
-      {data.title}
-    </h2>
-    
+    <SectionTitle
+      title={data.title}
+      centered={true}
+      titleClass="text-3xl md:text-4xl font-bold mb-12 text-center font-heading text-primary-800 animate-fade-in"
+    />
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {data.items.map((testimonial, index) => {
         const colors = testimonialColors[index % 3];
         return (
-          <div class={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col border ${colors.cardBorder} overflow-hidden`}>
+          <Card
+            variant="hover"
+            color="white"
+            shadow="lg"
+            rounded="xl"
+            padding="md"
+            class={`flex flex-col border ${colors.cardBorder} overflow-hidden`}
+          >
             <div class={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${colors.bgGradient}`}></div>
             <div class={`mb-6 ${colors.quoteColor}`}>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 opacity-80" fill="currentColor" viewBox="0 0 24 24">
@@ -69,7 +81,7 @@ const testimonialColors = [
                 <p class="text-sm text-gray-600">{testimonial.course}</p>
               </div>
             </div>
-          </div>
+          </Card>
         );
       })}
     </div>

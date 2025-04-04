@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  badge?: string;
+  centered?: boolean;
+  titleClass?: string;
+  descriptionClass?: string;
+}
+
+const { 
+  title, 
+  description, 
+  badge,
+  centered = true,
+  titleClass = 'text-3xl md:text-4xl font-bold mb-6 font-heading text-primary-800',
+  descriptionClass = 'text-xl text-gray-600'
+} = Astro.props;
+
+const alignment = centered ? 'text-center' : 'text-left';
+const maxWidth = centered ? 'max-w-3xl mx-auto' : '';
+---
+
+<div class={`${maxWidth} mb-12 ${alignment}`}>
+  {badge && (
+    <span class="inline-block py-1 px-3 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium mb-4">{badge}</span>
+  )}
+  <h2 class={titleClass} set:html={title} />
+  {description && <p class={descriptionClass}>{description}</p>}
+</div>

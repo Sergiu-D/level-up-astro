@@ -1,0 +1,56 @@
+---
+interface Props {
+  variant?: 'default' | 'hover' | 'bordered';
+  color?: 'white' | 'blue' | 'indigo' | 'pink';
+  shadow?: 'sm' | 'md' | 'lg' | 'xl';
+  rounded?: 'sm' | 'md' | 'lg' | 'xl';
+  padding?: 'sm' | 'md' | 'lg';
+  class?: string;
+}
+
+const { 
+  variant = 'default',
+  color = 'white',
+  shadow = 'md',
+  rounded = 'lg',
+  padding = 'md',
+  class: className = ''
+} = Astro.props;
+
+const colorClasses = {
+  white: 'bg-white',
+  blue: 'bg-blue-50',
+  indigo: 'bg-indigo-50',
+  pink: 'bg-pink-50'
+};
+
+const shadowClasses = {
+  sm: 'shadow-sm',
+  md: 'shadow-md',
+  lg: 'shadow-lg',
+  xl: 'shadow-xl'
+};
+
+const roundedClasses = {
+  sm: 'rounded-sm',
+  md: 'rounded-md',
+  lg: 'rounded-lg',
+  xl: 'rounded-xl'
+};
+
+const paddingClasses = {
+  sm: 'p-4',
+  md: 'p-6',
+  lg: 'p-8'
+};
+
+const variantClasses = {
+  default: '',
+  hover: 'hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1',
+  bordered: 'border border-gray-100'
+};
+---
+
+<div class={`${colorClasses[color]} ${shadowClasses[shadow]} ${roundedClasses[rounded]} ${paddingClasses[padding]} ${variantClasses[variant]} ${className}`}>
+  <slot />
+</div>

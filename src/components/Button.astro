@@ -1,0 +1,38 @@
+---
+interface Props {
+  text: string;
+  url: string;
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  color?: 'blue' | 'indigo' | 'pink' | 'green' | 'purple';
+  class?: string;
+}
+
+const { 
+  text, 
+  url, 
+  variant = 'primary',
+  size = 'md',
+  color = 'blue',
+  class: className = ''
+} = Astro.props;
+
+const variantClasses = {
+  primary: `bg-${color}-700 text-white hover:bg-${color}-600 shadow-lg hover:shadow-xl border-2 border-${color}-700`,
+  secondary: `bg-white text-${color}-700 hover:bg-gray-100 border-2 border-${color}-700 shadow-md`,
+  outline: `bg-transparent text-${color}-700 hover:bg-${color}-50 border-2 border-${color}-700`
+};
+
+const sizeClasses = {
+  sm: 'px-4 py-2 text-sm',
+  md: 'px-6 py-3 text-base',
+  lg: 'px-8 py-4 text-lg'
+};
+---
+
+<a
+  href={url}
+  class={`inline-block font-semibold transition duration-300 rounded-lg ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+>
+  <slot>{text}</slot>
+</a>
