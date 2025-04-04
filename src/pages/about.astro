@@ -2,27 +2,27 @@
 import Layout from '../layouts/Layout.astro';
 import aboutData from '../data/about.json';
 import { loadDataWithVariables } from '../utils/variables.js';
-import Header from '../components/Header.astro';
-import Story from '../components/Story.astro';
-import Approach from '../components/Approach.astro';
-import Team from '../components/Team.astro';
-import ContactCTA from '../components/ContactCTA.astro';
+import Header from '../sections/Header.astro';
+import Story from '../sections/Story.astro';
+import Approach from '../sections/Approach.astro';
+import Team from '../sections/Team.astro';
+import ContactCTA from '../sections/ContactCTA.astro';
 
 const processedData = loadDataWithVariables(aboutData) as any;
 ---
 
 <Layout title="About Us">
   <Header data={processedData.header} />
-  
+
   <section class="container mx-auto px-4">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 animate-slide-up">
       <Story data={processedData.story} />
       <Approach data={processedData.approach} />
     </div>
   </section>
-  
+
   <Team data={processedData.team} />
-  
+
   <ContactCTA data={{
     title: processedData.accreditations.title,
     description: processedData.accreditations.description,

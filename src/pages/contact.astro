@@ -2,10 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import contactData from "../data/contact.json";
 import { loadDataWithVariables } from "../utils/variables.js";
-import Header from "../components/Header.astro";
+import Header from "../sections/Header.astro";
 import ContactInfo from "../components/ContactInfo.astro";
 import ContactForm from "../components/ContactForm.astro";
-import Community from "../components/Community.astro";
+import Community from "../sections/Community.astro";
 
 const processedData = loadDataWithVariables(contactData);
 ---

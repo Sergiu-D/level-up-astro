@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import aboutData from '../data/about.json';
 import { loadDataWithVariables } from '../utils/variables.js';
-import Header from '../components/Header.astro';
-import ContactCTA from '../components/ContactCTA.astro';
+import Header from '../sections/Header.astro';
+import ContactCTA from '../sections/ContactCTA.astro';
 
 const processedData = loadDataWithVariables(aboutData) as any;
 ---
@@ -15,7 +15,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
       <div class="w-full h-full bg-gradient-to-r from-blue-900/90 to-indigo-900/90"></div>
       <div class="absolute inset-0 bg-[url('/img/about-hero.jpg')] bg-cover bg-center mix-blend-overlay opacity-70"></div>
     </div>
-    
+
     <div class="relative z-10 pt-24 pb-20 md:pt-32 md:pb-28">
       <div class="container mx-auto px-4">
         <div class="max-w-3xl mx-auto text-center">
@@ -26,7 +26,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
       </div>
     </div>
   </div>
-  
+
   <div class="container mx-auto px-4 py-16">
     <!-- Introduction Section -->
     <section id="antet" class="mb-20">
@@ -49,7 +49,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
         </div>
       </div>
     </section>
-    
+
     <!-- About Section -->
     <section id="despre" class="mb-24">
       <div class="text-center mb-16">
@@ -57,7 +57,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
         <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-700 mx-auto mb-8"></div>
         <p class="max-w-3xl mx-auto text-xl text-gray-700">{processedData.approach.description}</p>
       </div>
-      
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
           <div class="h-48 bg-[url('/img/methodology-1.jpg')] bg-cover bg-center"></div>
@@ -72,7 +72,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
             </div>
           </div>
         </div>
-        
+
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
           <div class="h-48 bg-[url('/img/methodology-2.jpg')] bg-cover bg-center"></div>
           <div class="p-6">
@@ -86,7 +86,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
             </div>
           </div>
         </div>
-        
+
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
           <div class="h-48 bg-[url('/img/methodology-3.jpg')] bg-cover bg-center"></div>
           <div class="p-6">
@@ -101,7 +101,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
           </div>
         </div>
       </div>
-      
+
       <div class="mt-16 bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-lg border border-blue-100">
         <div class="flex flex-col md:flex-row items-center">
           <div class="md:w-1/3 mb-6 md:mb-0 md:pr-10">
@@ -126,19 +126,19 @@ const processedData = loadDataWithVariables(aboutData) as any;
         </div>
       </div>
     </section>
-    
+
     <!-- Facilities Section -->
     <section id="facilitati" class="mb-24">
       <div class="relative py-16 px-8 rounded-3xl overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-700 opacity-90"></div>
         <div class="absolute inset-0 bg-[url('/img/facilities-bg.jpg')] bg-cover bg-center mix-blend-overlay"></div>
-        
+
         <div class="relative z-10 text-center mb-12">
           <h2 class="text-3xl font-bold text-white mb-4">{processedData.facilities.title}</h2>
           <div class="w-24 h-1 bg-white mx-auto mb-6"></div>
           <p class="max-w-3xl mx-auto text-xl text-blue-100">{processedData.facilities.description}</p>
         </div>
-        
+
         <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="bg-white/95 backdrop-blur-sm p-8 rounded-xl shadow-lg text-center transform transition-all duration-300 hover:scale-105">
             <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full flex items-center justify-center">
@@ -150,7 +150,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
             <p class="text-gray-600">Săli de clasă dotate cu tehnologie modernă pentru o experiență educațională de calitate.</p>
             <img src="/img/classroom.jpg" alt="Săli de clasă moderne" class="w-full h-40 object-cover rounded-lg mt-6" />
           </div>
-          
+
           <div class="bg-white/95 backdrop-blur-sm p-8 rounded-xl shadow-lg text-center transform transition-all duration-300 hover:scale-105">
             <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -161,7 +161,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
             <p class="text-gray-600">Acces la o colecție bogată de materiale și resurse didactice în limba engleză.</p>
             <img src="/img/library.jpg" alt="Biblioteca noastră" class="w-full h-40 object-cover rounded-lg mt-6" />
           </div>
-          
+
           <div class="bg-white/95 backdrop-blur-sm p-8 rounded-xl shadow-lg text-center transform transition-all duration-300 hover:scale-105">
             <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -175,7 +175,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
         </div>
       </div>
     </section>
-    
+
     <!-- Team Section -->
     <section id="echipa" class="mb-24">
       <div class="text-center mb-16">
@@ -184,7 +184,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
         <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-700 mx-auto mb-8"></div>
         <p class="max-w-3xl mx-auto text-xl text-gray-700">Echipa noastră este formată din profesori calificați, dedicați excelenței în educație și dezvoltării personale a fiecărui student.</p>
       </div>
-      
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {processedData.team.members.map((member: any, index: number) => (
           <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
@@ -220,19 +220,19 @@ const processedData = loadDataWithVariables(aboutData) as any;
         ))}
       </div>
     </section>
-    
+
     <!-- Statistics Section -->
     <section id="statistici" class="mb-24">
       <div class="relative py-20 px-8 rounded-3xl overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-indigo-900"></div>
         <div class="absolute inset-0 bg-[url('/img/pattern.svg')] bg-repeat opacity-10"></div>
-        
+
         <div class="relative z-10 text-center mb-16">
           <span class="inline-block py-1 px-3 rounded-full bg-blue-800 text-blue-200 text-sm font-medium mb-3">Rezultate Remarcabile</span>
           <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Performanța Noastră în Cifre</h2>
           <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto"></div>
         </div>
-        
+
         <div class="relative z-10">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="group">
@@ -248,7 +248,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
                 <p class="text-blue-200 text-lg">Studenți pe an</p>
               </div>
             </div>
-            
+
             <div class="group">
               <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 text-center transform transition-all duration-500 group-hover:bg-white/20 group-hover:scale-105">
                 <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-blue-700/50 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
@@ -262,7 +262,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
                 <p class="text-blue-200 text-lg">Rată de promovare</p>
               </div>
             </div>
-            
+
             <div class="group">
               <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 text-center transform transition-all duration-500 group-hover:bg-white/20 group-hover:scale-105">
                 <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-blue-700/50 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
@@ -276,7 +276,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
                 <p class="text-blue-200 text-lg">Ani de experiență</p>
               </div>
             </div>
-            
+
             <div class="group">
               <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 text-center transform transition-all duration-500 group-hover:bg-white/20 group-hover:scale-105">
                 <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-blue-700/50 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
@@ -296,7 +296,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
         </div>
       </div>
     </section>
-    
+
     <!-- Gallery Section -->
     <section id="galerie" class="mb-24">
       <div class="text-center mb-16">
@@ -305,7 +305,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
         <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-700 mx-auto mb-8"></div>
         <p class="max-w-3xl mx-auto text-xl text-gray-700">Explorați centrul nostru și spațiile de învățare create pentru a inspira și motiva studenții noștri.</p>
       </div>
-      
+
       <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mb-5">
         <div class="relative col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-lg group">
           <img src="/img/gallery-1.jpg" alt="Centrul Cambridge" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -316,7 +316,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
             </div>
           </div>
         </div>
-        
+
         <div class="relative rounded-2xl overflow-hidden shadow-lg group">
           <img src="/img/gallery-2.jpg" alt="Sala de clasă" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -325,7 +325,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
             </div>
           </div>
         </div>
-        
+
         <div class="relative rounded-2xl overflow-hidden shadow-lg group">
           <img src="/img/gallery-3.jpg" alt="Bibliotecă" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -335,7 +335,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
           </div>
         </div>
       </div>
-      
+
       <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
         <div class="relative rounded-2xl overflow-hidden shadow-lg group">
           <img src="/img/gallery-4.jpg" alt="Evenimente" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -345,7 +345,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
             </div>
           </div>
         </div>
-        
+
         <div class="relative rounded-2xl overflow-hidden shadow-lg group">
           <img src="/img/gallery-5.jpg" alt="Laborator" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -354,7 +354,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
             </div>
           </div>
         </div>
-        
+
         <div class="relative rounded-2xl overflow-hidden shadow-lg group">
           <img src="/img/gallery-6.jpg" alt="Zona de studiu" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -366,7 +366,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
       </div>
     </section>
   </div>
-  
+
   <!-- Contact CTA Section -->
   <div class="relative py-16 bg-gradient-to-r from-blue-600 to-indigo-700 overflow-hidden">
     <div class="absolute top-0 left-0 w-full h-full">
@@ -374,19 +374,19 @@ const processedData = loadDataWithVariables(aboutData) as any;
       <div class="absolute -top-24 -right-24 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-2xl opacity-50"></div>
       <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-2xl opacity-50"></div>
     </div>
-    
+
     <div class="relative z-10 container mx-auto px-4">
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">{processedData.accreditations.title}</h2>
         <p class="text-xl text-blue-100 mb-8">{processedData.accreditations.description}</p>
-        
+
         <a href={processedData.accreditations.cta.url} class="inline-flex items-center px-8 py-4 bg-white text-primary-700 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
           </svg>
           {processedData.accreditations.cta.text}
         </a>
-        
+
         <div class="mt-12 flex flex-wrap justify-center gap-8">
           <div class="w-24 h-24 bg-white/20 backdrop-blur-sm p-4 rounded-xl flex items-center justify-center">
             <img src="/img/accreditation-1.png" alt="Acreditare Cambridge" class="max-h-full" />
@@ -412,7 +412,7 @@ const processedData = loadDataWithVariables(aboutData) as any;
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
-        
+
         if (targetElement) {
           window.scrollTo({
             top: targetElement.offsetTop - 100,
@@ -421,30 +421,30 @@ const processedData = loadDataWithVariables(aboutData) as any;
         }
       });
     });
-    
+
     // Add scroll reveal animations
     const animateOnScroll = () => {
       const elements = document.querySelectorAll('.fade-in-section');
-      
+
       elements.forEach(element => {
         const elementPosition = element.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        
+
         if (elementPosition < windowHeight * 0.85) {
           element.classList.add('visible');
         }
       });
     };
-    
+
     // Add fade-in-section class to sections
     document.querySelectorAll('section').forEach(section => {
       section.classList.add('fade-in-section');
     });
-    
+
     // Initialize animation
     animateOnScroll();
     window.addEventListener('scroll', animateOnScroll);
-    
+
     // Add hover effects
     document.querySelectorAll('.hover\\:shadow-xl, .hover\\:shadow-lg, .hover\\:-translate-y-1, .hover\\:-translate-y-2, .hover\\:scale-105').forEach(element => {
       element.addEventListener('mouseenter', function(this: HTMLElement) {
@@ -461,9 +461,9 @@ const processedData = loadDataWithVariables(aboutData) as any;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
   }
-  
+
   .fade-in-section.visible {
     opacity: 1;
     transform: translateY(0);
   }
-</style> 
+</style>

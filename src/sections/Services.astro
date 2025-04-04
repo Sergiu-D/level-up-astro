@@ -202,44 +202,40 @@ const getGroupColors = (color: string) => {
                   </svg>
                 </div>
                 
-                <div class="mb-6">
-                  <span class={`inline-block py-1 px-3 ${colors.bg} ${colors.text} rounded-full text-sm font-medium mb-2`}>
-                    {group.age}
-                  </span>
-                  <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">{group.title}</h3>
-                  <p class="text-gray-600 mb-6">{group.description}</p>
-                </div>
+                <h3 class="text-2xl font-bold mb-2 font-heading text-gray-800">{group.title}</h3>
+                <div class="inline-block px-3 py-1 bg-white/80 rounded-full text-sm font-medium text-gray-700 mb-4">{group.age}</div>
                 
-                <!-- Features list -->
+                <p class="text-gray-700 mb-6">{group.description}</p>
+                
+                <!-- Features -->
                 <div class="space-y-4 mb-8">
-                  {group.features && group.features.map((feature) => (
-                    <div class="flex items-center">
-                      <div class={`w-10 h-10 ${colors.accent} rounded-full flex items-center justify-center mr-4 text-white`}>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                  {group.features.map((feature) => (
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class={`h-5 w-5 ${colors.text}`} viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
                       </div>
-                      <div>
-                        <h4 class="font-semibold text-gray-800">{feature.title}</h4>
+                      <div class="ml-3">
+                        <h4 class="font-medium text-gray-800">{feature.title}</h4>
                         <p class="text-sm text-gray-600">{feature.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
                 
-                <!-- Cambridge exams for this group -->
-                <div class={`p-4 ${colors.bg} rounded-xl mb-8`}>
-                  <h4 class="font-semibold text-gray-800 mb-2">{group.examInfo}</h4>
+                <!-- Exams -->
+                <div class="mb-6">
+                  <h4 class="font-medium text-gray-800 mb-3">{group.examInfo}</h4>
                   <div class="flex flex-wrap gap-2">
-                    {group.exams.map(exam => (
-                      <span class={`inline-block px-3 py-1 ${colors.accent} text-white text-sm rounded-full`}>
-                        {exam}
-                      </span>
+                    {group.exams.map((exam) => (
+                      <span class="px-3 py-1 bg-white/80 rounded-full text-sm font-medium text-gray-700">{exam}</span>
                     ))}
                   </div>
                 </div>
                 
-                <a href={`/courses/${group.id}`} class={`inline-flex items-center px-6 py-3 ${colors.accent} text-white rounded-lg shadow-md hover:shadow-lg transition-shadow`}>
+                <!-- CTA Button -->
+                <a href={`/classes#${group.id}`} class={`inline-flex items-center px-5 py-3 rounded-lg ${colors.accent} text-white hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg font-medium`}>
                   {data.ctaText || "Află mai multe"}
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -247,66 +243,32 @@ const getGroupColors = (color: string) => {
                 </a>
               </div>
               
-              <!-- Visual side -->
-              <div class="h-64 md:h-auto relative overflow-hidden rounded-lg">
-                <!-- Course Image with Fallback -->
-                <Image
-                  src={group.image} 
-                  alt={group.title}
-                  loading="lazy"
-                  width="1600"
-                   height="900"
-                  class="absolute inset-0 w-full h-full object-cover rounded-lg"
-                />
-                
-                <!-- Fallback and overlay -->
-                <div class={`absolute inset-0 bg-gradient-to-br ${colors.gradient} opacity-80 fallback-bg`}></div>
-                
-                <!-- Content overlay -->
-                <div class="absolute inset-0 flex items-center justify-center p-8">
-                  <div class="text-center">
-                    <div class={`w-24 h-24 mx-auto ${colors.accent} rounded-full flex items-center justify-center text-white mb-4 shadow-lg`}>
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={group.icon} />
-                      </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">{data.visualInfo ? `${data.visualInfo.titlePrefix} ${group.age}` : `Grup ${group.age}`}</h3>
-                    <p class="text-gray-600">{data.visualInfo ? data.visualInfo.description : "Cursuri adaptate pentru această categorie de vârstă"}</p>
-                    
-                    <!-- Cambridge levels -->
-                    <div class="mt-6">
-                      <div class="inline-block bg-white rounded-xl p-3 shadow-sm">
-                        <div class="flex items-center">
-                          <div class="bg-indigo-50 p-2 rounded-full mr-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                            </svg>
-                          </div>
-                          <div class="text-left">
-                            <p class="text-sm font-semibold text-gray-800">{data.visualInfo ? data.visualInfo.certificationTitle : "Certificări Cambridge"}</p>
-                            <p class="text-xs text-gray-600">{group.exams.join(" • ")}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+              <!-- Image side -->
+              <div class="relative">
+                <div class="h-full">
+                  <div class="h-full w-full overflow-hidden">
+                    <Image 
+                      src={group.image} 
+                      alt={group.title} 
+                      width={800} 
+                      height={600} 
+                      class="w-full h-full object-cover"
+                    />
                   </div>
-                </div>
-                
-                <!-- Bottom badge overlay -->
-                <div class="absolute bottom-0 right-0 left-0 p-4 bg-gradient-to-t from-gray-900 to-transparent">
-                  <div class="flex flex-wrap gap-2 justify-center">
-                    {group.exams.map(exam => (
-                      <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm text-white font-medium">
-                        {exam}
-                      </span>
-                    ))}
+                  
+                  <!-- Overlay with info -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                    <div class="p-8">
+                      <h4 class="text-xl font-bold text-white mb-2">{data.visualInfo?.titlePrefix || "Grup"} {group.title}</h4>
+                      <p class="text-white/80 text-sm">{data.visualInfo?.description || "Cursuri adaptate pentru această categorie de vârstă"}</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        )
+        );
       })}
     </div>
   </div>
-</section> 
+</section>

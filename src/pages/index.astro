@@ -2,12 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import homeData from "../data/home.json";
 import { loadDataWithVariables } from "../utils/variables.js";
-import Hero from "../components/Hero.astro";
-import Features from "../components/Features.astro";
-import Testimonials from "../components/Testimonials.astro";
-import Services from "../components/Services.astro";
-import ContactCTA from "../components/ContactCTA.astro";
-import Contact from "../components/Contact.astro";
+import Hero from "../sections/Hero.astro";
+import Features from "../sections/Features.astro";
+import Testimonials from "../sections/Testimonials.astro";
+import Services from "../sections/Services.astro";
+import ContactCTA from "../sections/ContactCTA.astro";
+import Contact from "../sections/Contact.astro";
 
 const processedData = loadDataWithVariables(homeData) as any;
 ---
