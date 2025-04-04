@@ -3,7 +3,7 @@
     "items": [
       { "text": "Acasă", "url": "/" },
       { "text": "Cursuri", "url": "/classes" },
-      { "text": "Despre", "url": "/about" },
+      { "text": "Despre Noi", "url": "/despre-noi" },
       { "text": "Contact", "url": "/contact" }
     ]
   },
@@ -22,7 +22,7 @@
       "info": {
         "title": "Informații",
         "items": [
-          { "text": "Despre noi", "url": "/about" },
+          { "text": "Despre Noi", "url": "/despre-noi" },
           { "text": "Metodologia Cambridge", "url": "/methodology" },
           { "text": "Întrebări frecvente", "url": "/faq" },
           { "text": "Contact", "url": "/contact" }
