@@ -15,7 +15,16 @@
                 "primary": false
             }
         ],
-        "image": "/images/hero-students.svg"
+        "image": "/images/hero-students.svg",
+        "certifications": {
+            "title": "Certificări disponibile:",
+            "items": ["YLE", "KET", "PET", "FCE", "CAE", "CPE"]
+        },
+        "badges": {
+            "cambridge": "Cambridge English",
+            "grade": "A+",
+            "imageAlt": "Cambridge English Students"
+        }
     },
     "features": {
         "title": "De ce să alegi Centrul de Limba Engleză Cambridge",
@@ -227,10 +236,25 @@
     "contact": {
         "title": "Contactează-ne",
         "description": "Avem o echipă dedicată gata să răspundă la toate întrebările tale despre cursurile noastre de limbă engleză și programele Cambridge.",
+        "badge": "Contactează-ne",
         "address": {
             "address": "Strada Exemplu 123, București, România",
             "phone": "+40 722 123 456",
-            "email": "contact@example.com"
+            "email": "contact@example.com",
+            "title": "Informații de Contact",
+            "addressLabel": "Adresa noastră",
+            "phoneLabel": "Telefon",
+            "emailLabel": "Email"
+        },
+        "social": {
+            "title": "Urmărește-ne",
+            "facebook": "#",
+            "instagram": "#",
+            "twitter": "#"
+        },
+        "cambridge": {
+            "title": "Centru Autorizat Cambridge",
+            "description": "Pregătire și certificare pentru toate nivelurile"
         },
         "form": {
             "namePlaceholder": "Numele tău",
@@ -244,6 +268,10 @@
             "saturday": "10:00 - 14:00",
             "sunday": "Închis"
         },
-        "mapTitle": "Locația noastră"
+        "map": {
+            "title": "Locația noastră",
+            "placeholder": "Hartă interactivă",
+            "description": "Integrează Google Maps sau alt serviciu de hărți pentru a afișa locația școlii tale."
+        }
     }
 }
