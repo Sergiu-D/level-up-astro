@@ -1,5 +1,4 @@
 ---
-import { loadDataWithVariables } from "../utils/variables.js";
 import { Image } from 'astro:assets';
 
 interface HeroProps {
@@ -12,6 +11,15 @@ interface HeroProps {
     primary: boolean;
   }[];
   image: string;
+  certifications: {
+    title: string;
+    items: string[];
+  };
+  badges: {
+    cambridge: string;
+    grade: string;
+    imageAlt: string;
+  };
 }
 
 interface Props {
@@ -83,39 +91,16 @@ const { data } = Astro.props;
         <!-- Cambridge Badges -->
         <div class="mt-12 flex flex-wrap gap-6 items-center">
           <div class="text-sm font-medium text-gray-500">
-            Certificări disponibile:
+            {data.certifications.title}
           </div>
           <div class="flex flex-wrap gap-4">
-            <div
-              class="bg-white shadow-md rounded px-3 py-2 text-blue-800 font-semibold text-xs border border-gray-100"
-            >
-              YLE
-            </div>
-            <div
-              class="bg-white shadow-md rounded px-3 py-2 text-blue-800 font-semibold text-xs border border-gray-100"
-            >
-              KET
-            </div>
-            <div
-              class="bg-white shadow-md rounded px-3 py-2 text-blue-800 font-semibold text-xs border border-gray-100"
-            >
-              PET
-            </div>
-            <div
-              class="bg-white shadow-md rounded px-3 py-2 text-blue-800 font-semibold text-xs border border-gray-100"
-            >
-              FCE
-            </div>
-            <div
-              class="bg-white shadow-md rounded px-3 py-2 text-blue-800 font-semibold text-xs border border-gray-100"
-            >
-              CAE
-            </div>
-            <div
-              class="bg-white shadow-md rounded px-3 py-2 text-blue-800 font-semibold text-xs border border-gray-100"
-            >
-              CPE
-            </div>
+            {data.certifications.items.map(item => (
+              <div
+                class="bg-white shadow-md rounded px-3 py-2 text-blue-800 font-semibold text-xs border border-gray-100"
+              >
+                {item}
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -129,7 +114,7 @@ const { data } = Astro.props;
           >
             <Image
               src={data.image}
-              alt="Cambridge English Students"
+              alt={data.badges.imageAlt}
               class="h-full w-full object-cover rounded-xl"
               width="1600"
               height="900"
@@ -139,14 +124,14 @@ const { data } = Astro.props;
             <div
               class="absolute -top-6 -right-6 bg-blue-700 text-white px-4 py-2 rounded-lg shadow-lg transform rotate-3"
             >
-              <span class="font-bold text-sm">Cambridge English</span>
+              <span class="font-bold text-sm">{data.badges.cambridge}</span>
             </div>
 
             <!-- Floating Elements -->
             <div
               class="absolute -left-8 -bottom-4 bg-yellow-400 w-16 h-16 rounded-full shadow-lg flex items-center justify-center transform -rotate-6"
             >
-              <span class="font-bold text-2xl text-white">A+</span>
+              <span class="font-bold text-2xl text-white">{data.badges.grade}</span>
             </div>
 
             <div
