@@ -56,5 +56,13 @@
             "text": "Contactează-ne",
             "url": "/contact"
         }
+    },
+    "contactCTA": {
+        "title": "Pregătit să începi călătoria ta cu limba engleză?",
+        "description": "Alătură-te miilor de studenți care și-au îmbunătățit abilitățile de limba engleză cu noi. Oferim cursuri pentru toate vârstele și nivelurile.",
+        "button": {
+            "text": "Înscrie-te acum",
+            "url": "/contact"
+        }
     }
 }
